@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LuxeMotors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- The side navigation menu for mobile -->
+    <div id="mySidenav" class="sidenav">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Buy</a>
+        <a href="#">Service</a>
+        <a href="#">Insurance</a>
+    </div>
+
+    <header class="header d-flex">
+        <section class="logo">
+            <h1>LuxeMotors</h1>
+        </section>
+        <section class="user-nav">
+            <ul class="user-nav__list d-flex">
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Insurance</a></li>
+            </ul>
+        </section>
+        <img src="img/menu.svg" class="open-nav" onclick="openNav()">
+    </header>
+    <main class="main">
+        <section class="product d-flex">
+            <section class="product__info">
+                <h1 class="product__title">Your Gateway to <br> Premium Automotive Excellence</h1>
+                <h2 class="product__subtitle">Exclusive access to the world's most luxurious car brands</h2>
+                <article class="product__list">
+                    <ul class="product__list--settings">
+                        <li><span class="product__list--bgtxt"><span class="product__list--bigtxt">VIP</span> Secure Payment System</span></li>
+                        <li><span class="product__list--bgtxt">Virtual Showroom &<span class="product__list--bigtxt"> 360° </span>View</span></li>
+                        <li><span class="product__list--bgtxt">Curated <span class="product__list--bigtxt">LUX</span> Collection</span></li>
+                    </ul>
+                    <button type="button" class="product__btn btn--order">ORDER</button>
+                </article>
+            </section>
+            <section class="product__img">
+                <img src="img/car.jpg" class="full-img">
+            </section>
+        </section>
+        <section class="order d-flex">
+            <div class="order__img order__img--first mx-left">
+            </div>
+            <article class="order__list mx-auto">
+                <div class="d-flex order__list--settings">
+                    <img class="order__badge" src="img/Exclude.png">
+                    <p>Showcase an exclusive selection of luxury cars (e.g., Ferrari, Rolls-Royce, Lamborghini, Bentley, Porsche) in a visually stunning and user-friendly layout.</p>
+                </div>
+                <div class="d-flex order__list--settings">
+                    <img class="order__badge" src="img/Exclude.png">
+                    <p>Live chat or booking system for one-on-one consultations with experts who can guide customers through the buying process.</p>
+                </div>
+                <div class="d-flex order__list--settings">
+                    <img class="order__badge" src="img/Exclude.png">
+                    <p>Services such as car delivery, customization options, and after-sales support.</p>
+                </div>
+                <div class="d-flex order__list--settings">
+                    <img class="order__badge" src="img/Exclude.png">
+                    <p>Featuring limited-edition and rare cars, offering buyers access to hard-to-find models.</p>
+                </div>
+                <button type="button" class="order__btn btn--order">ORDER</button>
+            </article>
+            <div class="order__img order__img--second mx-right">
+            </div>
+        </section>
+        <article class="submit-form d-flex">
+            <div class="submit-form__form-area">
+                <h2 class="submit-form__title">I want to become a<br> VIP client</h2>
+                <input class="submit-form__input" name="" type="text" placeholder="Name">
+                <input class="submit-form__input" name="" type="email" placeholder="E-mail">
+                <div class="d-flex submit-form__agrement">
+                    <input class="submit-form__checkbox" name="" type="checkbox">
+                    <p class="submit-form__checkbox--text">I accept Privacy policy</p>
+                </div>
+                <button type="button" class="submit-form__btn">SUBMIT FORM</button>
+            </div>
+            <div class="submit-form__img">
+                <img src="img/women.png" class="submit-form__img--chd-img">
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <section class="footer__user-nav">
+            <div class="d-flex footer__user-nav--settings">
+                <a href="#">Buy</a>
+                <a href="#">Service</a>
+                <a href="#">Insurance</a>
+            </div>
+        </section>
+        <section class="footer__instruments d-flex">
+            <div class="logo mx-left">
+                <h1>LuxeMotors</h1>
+            </div>
+            <div class="footer__socials mx-auto d-flex">
+                <a href="#">
+                    <img src="img/inst.svg">
+                </a>
+                <a href="#">
+                    <img src="img/tiktok.svg">
+                </a>
+                <a href="#">
+                    <img src="img/ln.svg">
+                </a>
+                <a href="#">
+                    <img src="img/facebook.svg">
+                </a>
+                <a href="#">
+                    <img src="img/telegram.svg">
+                </a>
+                <a href="#">
+                    <img src="img/youtube.svg">
+                </a>
+            </div>
+            <div class="footer__btn mx-right">
+                <button type="button" class="footer__btn--settings btn--order">ORDER</button>
+            </div>
+        </section>
+        <section class="footer__docs d-flex">
+            <div class="footer__copyright mx-left">
+                <p>© 2024, Copyright.</p>
+            </div>
+            <div class="footer__privacy mx-auto ta-center">
+                <a href="#">Privacy policy</a>
+            </div>
+            <div class="footer__terms mx-right ta-right">
+                <a href="#">Terms of use</a>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        const header = document.querySelector('header');
+        document.addEventListener('scroll', () => {
+            if(window.scrollY > 0){
+                header.classList.add('scrolled');
+            } else{
+                header.classList.remove('scrolled');
+            }
+        })
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        } 
+    </script>
+</body>
+</html>
